@@ -1,0 +1,169 @@
+
+/*Eliezer Pulido
+*/
+
+
+/*Este * selecciona toda la pagina y le quita los margenes y el padding, 
+he leido en algunos lugarles que esto no se debe hacer y tambien he leido que 
+si se hace. Si podria aclararme esta duda*/
+*{
+	margin: 0%;
+	padding: 0%; 
+}
+
+/*--------------------CABECERA----------------------------------------*/
+
+/*Comienzo definiendo el body, poniendole una imagen de fondo y fijandola para 
+que no se mueva
+asimismo, agrego background repeat no repeat para que solo se vea una vez
+y background-size:cover para cubrir la totalidad del fondo*/
+body{
+background-image: url(../recursos/fondo4.jpg); 
+background-attachment: fixed;
+background-repeat:no-repeat;
+background-size: cover;  
+}
+
+/*En el header agrego un color de fondo hexadecimal y le doy un width de 96%
+este valor, segun he leido abarcara la mayoria de las pantallas, aunque no estoy
+muy seguro. Luego le doy un padding de 1% y 2% y un margen inferior de 0%
+para que no se separe de la barra de navegacion */
+header {
+	background-color:#ffffff;
+	width: 96%;
+	padding: 1% 2%;
+	margin-bottom: 0%;
+}
+
+
+/*aqui lo que hago es definir las dimensiones de lo que 
+esta contenido en en header*/
+#cabecera{
+	width: 960px;
+	display: inline-block;
+ }
+/*abajo configuro la imagen que aparece al lado del titulo en la parte
+superior de la pagina. le doy unas dimensiones de 90x100px y utilizo 
+border-radius con un 80%. Border radius lo que hace es redondear el contorno 
+de la imagen*/
+#cabecera > #imagenP1{
+	width: 90px;
+	height: 100px;
+	border-radius: 80%; 
+	
+}
+
+/*en este caso al h1 se le asigna un color azul a traves de un codigo
+ hexadecimal #0f5fd2 que obtuve de una herramienta de manipulacion de imagenes
+ llamada gimp. asimismo le doy un margen izquierdo para que se separe de
+ la imagen que ira a su lado. tambien un tipo de letra de tipo Arial 
+ y el font-weight: bold paraque sea en "negrita" (aunque no se si es el termino 
+ apropiado) 
+ */
+#cabecera h1 {
+	color: #0f5fd2;
+	margin-left: 2%;
+	font-size: 80px;
+	font-family:Arial;
+	font-weight: bold;
+}
+/*---------------------------FIN CABECERA-----------------*/
+
+/*-----------------------Barra de Navegacion----------------*/
+
+/*primero fijo las dimensiones de la barra del 96% de ancho y con un largo de
+10px asimismo agrego un relleno o padding de 0% y 2%. Tambien utilizo
+background-color: para agregarle un color de fondo mediante el codigo 
+hexadecimal #9d0824*/
+
+#menu {
+	width: 96%;
+	height: 10px;
+	padding:2%;
+	background-color: #9d0824;
+	padding-bottom: 3%;
+}
+
+/*text-decoration: none; elimina el subrayado de los enlaces, les doy a cada
+enlace una aliniacion central y un color al texto con el codigo #d4caca 
+que corresponde al gris*/
+#menu a{
+	text-decoration: none;
+	text-align: center;
+	color: #d4caca;
+}
+
+/*procedemos a modificar cada elemento de la lista*/
+#menu li{
+	display: inline;
+	margin: 1%;
+	font-weight:bold;
+
+}
+
+/*muy importante este. abajo utilizo una subclase de css llamada hover
+la cual se usa para que se realice una accion cuando el cursor pase por
+arriba del elemento a (en este caso). Podemos ver que el color de los enlaces
+cambiara cuando se le pase en cursor por arriba*/
+ #menu a:hover {	 
+	color: #ffffff;
+}
+/*-----------------------FIN Barra de Navegacion----------------*/
+
+/*-----------------------CONTENIDO PRINCIPAL----------------*/
+
+/*Como queria que el contenido principal de cada pagina se mostrase, no cubriendo
+todo el body sino centrado, lo que hice fue encerrarlo dentro de un div
+con el id todo. ese div le doy un width de 80% y un margin auto para que se centre.
+Asimismo configuro los margenes y el padding y redondeo solo un poco el borde */
+
+#todo{
+	width: 80%;
+	margin: auto;
+	background-color: #f7f7f7;
+	margin-top: 3%;
+	padding: 2%;
+	border-radius: 2%;
+}
+
+
+#imgPagina{
+	margin: 2%;
+}
+/*configuro dimensiones*/
+#contenido{
+	display: inline;
+	width: 40%;
+	margin: 2%;
+	
+}
+/*elimino el subrayado */
+#contenido li {
+	list-style: none;
+}
+/*-----------------------FIN CONTENIDO PRINCIPAL----------------*/
+
+/*-----------------------FOOTER Y CLASES ----------------*/
+
+/*El footer solo contiene un mensaje de copyright con mi nombre. Solo centro en 
+texto, aplico un margin top para separarlo del contenido principal*/
+
+footer p{
+	text-align: center;
+	color: #ffffff;
+	margin-top: 1%;
+	
+
+}
+
+/*Estas ultimas se tratan de clases utilizadas para colocar un elemento al lado del
+otro, para esto se debe hacer flotar los elementos uno al lado del otro y 
+hacer un clear both para que no se vean desordenados */
+.flotar{
+	float: left;
+}
+
+.restaurar {
+	clear: both;
+}
+/*-----------------------FIN FOOTER Y CLASES ----------------*/
