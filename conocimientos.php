@@ -53,9 +53,9 @@ body:
 					de la pagina u otro documento html que utilizara este como 
 					plantilla-->
 			<ul>
-				<li><a href="index.html">Datos Personales</a></li>
-				<li><a href="conocimientos.html">Conocimientos Adquiridos</a></li>
-				<li><a href="contacto.html">Contacto</a></li>
+				<li><a href="index.php">Datos Personales</a></li>
+				<li><a href="conocimientos.php">Conocimientos Adquiridos</a></li>
+				<li><a href="contacto.php">Contacto</a></li>
 			</ul>
 			</div>
 		</nav>
