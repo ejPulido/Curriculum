@@ -59,8 +59,11 @@ app.post('/contacto',function(request,response){
 
 });
 
+const host  = '0.0.0.0';
+const puerto = process.env.PORT || 3000;
 
-app.listen(8000, function(){
-	console.log("puerto:8000");
+app.listen(puerto,host,function(){
+
+	console.log("app corriendo en el puerto: 8000");
+
 });
-
