@@ -1,0 +1,82 @@
+<!--ELiezer J. Pulido
+	CI:V-27863678
+
+Pagina principal
+
+Resumen
+
+	La siguiente pagina esta estructurada por:
+
+head:
+	title: titulo de la pagina
+	link: etiqueta que nos permite unir el archivo html con el css
+	meta: etiqueta utilizada para cambiar la codificacion de la pag
+
+
+body:
+	header: cabecera
+	main: contenido principal
+	section: seccion dentro del contenido principal
+	footer: pie de pagina 
+-->
+
+<%-include ("arriba.ejs")%>
+			
+
+			<main>
+				
+				<section>
+					<!--Este section contiene la informacion de la pagina principal
+						igualmente encierro cada informacion en un div y dejo al final un div vacio para hacer uso del modelo de cajas tradicional haciendo flotar en el archivo css cada div a la izquierda, se que existe una tecnica llamada modelo de cajas flexibles pero aun no la domino-->
+					<div id="imgPagina" class="flotar">
+						<img src="../public/recursos/perfil.jpg" id="imagenP2">
+					</div>
+					
+					<div  id = "contenido" class="flotar">
+						<h2>Datos Personales</h2>
+						<br>
+						<H3>Nombre:</H3> 
+						<p>Eliezer José Pulido Araujo.</p>
+						<br>
+						<h3>Fecha de Nacimiento:</h3>
+						<p>06 de Septiembre del 2000</p>
+						<br>
+						<h3>Ciudad:</h3>
+						<p>Villa de Cura,Estado Aragua.</p>						
+						<br>
+						<p>Ingeniería en Informática(En Curso). Universidad Nacional Experimental, Rómulo Gallegos (UNERG).</p>	
+						<br>
+
+						<h2>Destrezas y Habilidades</h2>
+						<br>
+						
+						<h3>Programación:</h3>
+
+							<ul>
+								<li>Maquetado HTML</li>
+								<li>Diseño CSS</li>
+								<li>Programación JavaScript, Python y Java</li>
+								<li>Creación Web Apps con Framework Django</li>
+									
+
+							</ul>
+						<br>
+							<h2>Información de Contacto</h2>	
+							<h3>Correo: </h3>
+							<p>eliezerpulido5@gmail.com</p>
+							<br>
+							<h3>Telefono</h3>
+							<p>(0424)-398-7670</p>	
+							<BR>
+							<a href="https://www.facebook.com/eliezer.pulido.soy.yo.12" target="BLANK">
+							FACEBOOK</a>
+						<br>
+							<h2>Enlaces Externos</h2>
+							<a href=""><p><b>Perfil de Github</b></p></a>
+					</div>	
+
+					<div class="restaurar"></div>
+				
+				</section>
+			</main>
+		<%-include("abajo.ejs")%>
