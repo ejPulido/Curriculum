@@ -1,4 +1,8 @@
 <%-include("arriba.ejs")%>
+
+ <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
  <main>
  	
  <section>
@@ -9,16 +13,21 @@
 
  		<h1 class="centrar titulo">Formulario de Contacto</h1>
 
-	<form method="POST" action="/contacto" value="json">
+		<p class="centrar <%= clase %>"><%= texto %></p>
+
+	<form method="POST" action="/contacto" value="json" id="form">
 		<label  class="bloque centrar form">Nombre: <input type="text" name="nombre" placeholder="Escriba su Nombre" ></label>
 		<label  class="bloque centrar form">Asunto: <input type="text" name="asunto" placeholder="Escriba Asunto" ></label>
-		<label class="bloque centrar form"> Email: <input type="email" name="email" placeholder="ejemplo@gmail.com"></label>
 		<div class="bloque centrar form">
 			<textarea  name="mensaje" cols="90" rows="10" placeholder="Escriba el Mensaje que Desea Hacerme Llegar" ></textarea>
 		</div>
-					
+			<!--Agregrando reCAPTCHA	
+			-->						
+				<div class="g-recaptcha" data-sitekey="6LctgjEeAAAAAJACbUdTTt97uRvMPsc60bIh_Emc"></div>
+
 		
-		<input type="submit" name="" class="bloque centrar botongrande">
+		<input type="submit" name="" class="bloque centrar botongrande" value="Enviar">
+
 	</form>
 </section>
 

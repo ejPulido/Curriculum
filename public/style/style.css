@@ -206,4 +206,11 @@ hacer un clear both para que no se vean desordenados */
 .restaurar {
 	clear: both;
 }
+.exito{
+	color: #4ad910;
+}
+
+.error{
+	color: #f0141f;
+}
 /*-----------------------FIN FOOTER Y CLASES ----------------*/
